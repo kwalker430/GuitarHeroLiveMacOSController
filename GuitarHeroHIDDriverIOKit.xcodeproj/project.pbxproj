@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A194A0A42CC2FD0F0032470B /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A194A0A32CC2FD0F0032470B /* IOKit.framework */; };
+		A194A0A62CC2FD180032470B /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A194A0A52CC2FD180032470B /* IOBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A194A0862CC2FCEE0032470B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A194A06C2CC2FCED0032470B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A194A0732CC2FCED0032470B;
+			remoteInfo = GuitarHeroHIDDriverIOKit;
+		};
+		A194A0902CC2FCEE0032470B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A194A06C2CC2FCED0032470B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A194A0732CC2FCED0032470B;
+			remoteInfo = GuitarHeroHIDDriverIOKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A194A0742CC2FCED0032470B /* GuitarHeroHIDDriverIOKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarHeroHIDDriverIOKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A194A0852CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarHeroHIDDriverIOKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A194A08F2CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuitarHeroHIDDriverIOKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A194A0A32CC2FD0F0032470B /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		A194A0A52CC2FD180032470B /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A194A0762CC2FCED0032470B /* GuitarHeroHIDDriverIOKit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GuitarHeroHIDDriverIOKit;
+			sourceTree = "<group>";
+		};
+		A194A0882CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GuitarHeroHIDDriverIOKitTests;
+			sourceTree = "<group>";
+		};
+		A194A0922CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GuitarHeroHIDDriverIOKitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A194A0712CC2FCED0032470B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A194A0A62CC2FD180032470B /* IOBluetooth.framework in Frameworks */,
+				A194A0A42CC2FD0F0032470B /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A194A0822CC2FCEE0032470B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A194A08C2CC2FCEE0032470B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A194A06B2CC2FCED0032470B = {
+			isa = PBXGroup;
+			children = (
+				A194A0762CC2FCED0032470B /* GuitarHeroHIDDriverIOKit */,
+				A194A0882CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests */,
+				A194A0922CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests */,
+				A194A0A22CC2FD0F0032470B /* Frameworks */,
+				A194A0752CC2FCED0032470B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A194A0752CC2FCED0032470B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A194A0742CC2FCED0032470B /* GuitarHeroHIDDriverIOKit.app */,
+				A194A0852CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests.xctest */,
+				A194A08F2CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A194A0A22CC2FD0F0032470B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A194A0A52CC2FD180032470B /* IOBluetooth.framework */,
+				A194A0A32CC2FD0F0032470B /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A194A0732CC2FCED0032470B /* GuitarHeroHIDDriverIOKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A194A0992CC2FCEE0032470B /* Build configuration list for PBXNativeTarget "GuitarHeroHIDDriverIOKit" */;
+			buildPhases = (
+				A194A0702CC2FCED0032470B /* Sources */,
+				A194A0712CC2FCED0032470B /* Frameworks */,
+				A194A0722CC2FCED0032470B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A194A0762CC2FCED0032470B /* GuitarHeroHIDDriverIOKit */,
+			);
+			name = GuitarHeroHIDDriverIOKit;
+			packageProductDependencies = (
+			);
+			productName = GuitarHeroHIDDriverIOKit;
+			productReference = A194A0742CC2FCED0032470B /* GuitarHeroHIDDriverIOKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A194A0842CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A194A09C2CC2FCEE0032470B /* Build configuration list for PBXNativeTarget "GuitarHeroHIDDriverIOKitTests" */;
+			buildPhases = (
+				A194A0812CC2FCEE0032470B /* Sources */,
+				A194A0822CC2FCEE0032470B /* Frameworks */,
+				A194A0832CC2FCEE0032470B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A194A0872CC2FCEE0032470B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A194A0882CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests */,
+			);
+			name = GuitarHeroHIDDriverIOKitTests;
+			packageProductDependencies = (
+			);
+			productName = GuitarHeroHIDDriverIOKitTests;
+			productReference = A194A0852CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A194A08E2CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A194A09F2CC2FCEE0032470B /* Build configuration list for PBXNativeTarget "GuitarHeroHIDDriverIOKitUITests" */;
+			buildPhases = (
+				A194A08B2CC2FCEE0032470B /* Sources */,
+				A194A08C2CC2FCEE0032470B /* Frameworks */,
+				A194A08D2CC2FCEE0032470B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A194A0912CC2FCEE0032470B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A194A0922CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests */,
+			);
+			name = GuitarHeroHIDDriverIOKitUITests;
+			packageProductDependencies = (
+			);
+			productName = GuitarHeroHIDDriverIOKitUITests;
+			productReference = A194A08F2CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A194A06C2CC2FCED0032470B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A194A0732CC2FCED0032470B = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A194A0842CC2FCEE0032470B = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A194A0732CC2FCED0032470B;
+					};
+					A194A08E2CC2FCEE0032470B = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A194A0732CC2FCED0032470B;
+					};
+				};
+			};
+			buildConfigurationList = A194A06F2CC2FCED0032470B /* Build configuration list for PBXProject "GuitarHeroHIDDriverIOKit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A194A06B2CC2FCED0032470B;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A194A0752CC2FCED0032470B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A194A0732CC2FCED0032470B /* GuitarHeroHIDDriverIOKit */,
+				A194A0842CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitTests */,
+				A194A08E2CC2FCEE0032470B /* GuitarHeroHIDDriverIOKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A194A0722CC2FCED0032470B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A194A0832CC2FCEE0032470B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A194A08D2CC2FCEE0032470B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A194A0702CC2FCED0032470B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A194A0812CC2FCEE0032470B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A194A08B2CC2FCEE0032470B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A194A0872CC2FCEE0032470B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A194A0732CC2FCED0032470B /* GuitarHeroHIDDriverIOKit */;
+			targetProxy = A194A0862CC2FCEE0032470B /* PBXContainerItemProxy */;
+		};
+		A194A0912CC2FCEE0032470B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A194A0732CC2FCED0032470B /* GuitarHeroHIDDriverIOKit */;
+			targetProxy = A194A0902CC2FCEE0032470B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A194A0972CC2FCEE0032470B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A194A0982CC2FCEE0032470B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		A194A09A2CC2FCEE0032470B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuitarHeroHIDDriverIOKit/GuitarHeroHIDDriverIOKit.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GuitarHeroHIDDriverIOKit/Preview Content\"";
+				DEVELOPMENT_TEAM = 35M87AFRFL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinwalker.GuitarHeroHIDDriverIOKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A194A09B2CC2FCEE0032470B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuitarHeroHIDDriverIOKit/GuitarHeroHIDDriverIOKit.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"GuitarHeroHIDDriverIOKit/Preview Content\"";
+				DEVELOPMENT_TEAM = 35M87AFRFL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinwalker.GuitarHeroHIDDriverIOKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A194A09D2CC2FCEE0032470B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35M87AFRFL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinwalker.GuitarHeroHIDDriverIOKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuitarHeroHIDDriverIOKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GuitarHeroHIDDriverIOKit";
+			};
+			name = Debug;
+		};
+		A194A09E2CC2FCEE0032470B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35M87AFRFL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinwalker.GuitarHeroHIDDriverIOKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GuitarHeroHIDDriverIOKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GuitarHeroHIDDriverIOKit";
+			};
+			name = Release;
+		};
+		A194A0A02CC2FCEE0032470B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35M87AFRFL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinwalker.GuitarHeroHIDDriverIOKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GuitarHeroHIDDriverIOKit;
+			};
+			name = Debug;
+		};
+		A194A0A12CC2FCEE0032470B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35M87AFRFL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kevinwalker.GuitarHeroHIDDriverIOKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = GuitarHeroHIDDriverIOKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A194A06F2CC2FCED0032470B /* Build configuration list for PBXProject "GuitarHeroHIDDriverIOKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A194A0972CC2FCEE0032470B /* Debug */,
+				A194A0982CC2FCEE0032470B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A194A0992CC2FCEE0032470B /* Build configuration list for PBXNativeTarget "GuitarHeroHIDDriverIOKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A194A09A2CC2FCEE0032470B /* Debug */,
+				A194A09B2CC2FCEE0032470B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A194A09C2CC2FCEE0032470B /* Build configuration list for PBXNativeTarget "GuitarHeroHIDDriverIOKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A194A09D2CC2FCEE0032470B /* Debug */,
+				A194A09E2CC2FCEE0032470B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A194A09F2CC2FCEE0032470B /* Build configuration list for PBXNativeTarget "GuitarHeroHIDDriverIOKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A194A0A02CC2FCEE0032470B /* Debug */,
+				A194A0A12CC2FCEE0032470B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A194A06C2CC2FCED0032470B /* Project object */;
+}
