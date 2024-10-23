@@ -107,16 +107,22 @@ class GuitarHeroHIDDriver: ObservableObject {
         // Parse the button input (assuming button input is at index 0)
         let buttonData = reportData[0]
         var newButtonState: UInt8? = nil
-        if buttonData != selfPointer.buttonState {
-            newButtonState = buttonData
-            print("Button state updated: \(buttonData)")
-        }
 
         // Parse the strum bar input (assuming strum bar data is at index 4)
         let strumBarData = Int8(bitPattern: reportData[4])
         var newAxisState: Int8? = nil
 
-        // Ensure the strum bar input is processed even when a button is held down
+        // Handle button input, ignore the `0` state if the strum bar is not neutral
+        if buttonData != 0 || strumBarData == -128 {
+            if buttonData != selfPointer.buttonState {
+                newButtonState = buttonData
+                print("Button state updated: \(buttonData)")
+            }
+        } else {
+            print("Ignoring button state 0 while strum bar is held")
+        }
+
+        // Handle strum bar input, ensure it's processed independently of button state
         if strumBarData == -128 && newButtonState != nil {
             // Ignore this reset if caused by a button press
             print("Ignoring strum bar reset to neutral (-128) caused by button press")
@@ -126,7 +132,7 @@ class GuitarHeroHIDDriver: ObservableObject {
             print("Strum bar state updated: \(strumBarData)")
         }
 
-        // Update the button state and strum bar state independently, ensuring neither is blocked
+        // Update both states independently, ensuring neither is blocked or ignored
         if let newButtonState = newButtonState {
             selfPointer.buttonState = newButtonState
         }
