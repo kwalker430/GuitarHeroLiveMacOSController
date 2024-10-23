@@ -38,6 +38,7 @@ class GuitarHeroHIDDriver: ObservableObject {
         ]
 
         IOHIDManagerSetDeviceMatching(ioHIDManager, matchingDict as CFDictionary)
+        //IOHIDManagerOpen(ioHIDManager, IOOptionBits(kIOHIDOptionsTypeSeizeDevice)) // uncomment this to lock input to our app only
         
         // Pass self context to the callbacks
         IOHIDManagerRegisterDeviceMatchingCallback(ioHIDManager, deviceMatchingCallback, Unmanaged.passUnretained(self).toOpaque())
@@ -100,34 +101,42 @@ class GuitarHeroHIDDriver: ObservableObject {
         let reportData = Data(bytes: report, count: reportLength)
         let selfPointer = Unmanaged<GuitarHeroHIDDriver>.fromOpaque(context).takeUnretainedValue()
 
-        // Append report data to the buffer
-        selfPointer.inputBuffer.append(contentsOf: reportData)
+        // Log the raw HID report data for debugging
+        print("HID report data: \(reportData.map { String(format: "%02x", $0) })")
 
-        // Process the buffer if it contains a full report
-        if selfPointer.inputBuffer.count >= selfPointer.expectedReportSize {
-            // Parse button data from reportData[0] and strum bar data from reportData[4]
-            let buttonData = selfPointer.inputBuffer[0]  // Button data at byte 0
-            let strumBarData = Int8(bitPattern: selfPointer.inputBuffer[4])  // Strum bar data at byte 4
+        // Parse the button input (assuming button input is at index 0)
+        let buttonData = reportData[0]
+        var newButtonState: UInt8? = nil
+        if buttonData != selfPointer.buttonState {
+            newButtonState = buttonData
+            print("Button state updated: \(buttonData)")
+        }
 
-            // Update the button state
-            if buttonData != selfPointer.buttonState {
-                print("Button pressed: \(buttonData)")
-                selfPointer.buttonState = buttonData
-            }
+        // Parse the strum bar input (assuming strum bar data is at index 4)
+        let strumBarData = Int8(bitPattern: reportData[4])
+        var newAxisState: Int8? = nil
 
-            // Update the strum bar state
-            if strumBarData != selfPointer.axisState {
-                print("Strum bar moved: \(strumBarData)")
-                selfPointer.axisState = strumBarData
-            }
+        // Ensure the strum bar input is processed even when a button is held down
+        if strumBarData == -128 && newButtonState != nil {
+            // Ignore this reset if caused by a button press
+            print("Ignoring strum bar reset to neutral (-128) caused by button press")
+        } else if strumBarData == -1 || strumBarData == 0 {
+            // Always update strum bar when it's in a valid state (-1 or 0)
+            newAxisState = strumBarData
+            print("Strum bar state updated: \(strumBarData)")
+        }
 
-            // Update UI with both button and strum bar states
-            DispatchQueue.main.async {
-                selfPointer.statusMessage = "Button: \(selfPointer.buttonState), Strum bar: \(selfPointer.axisState)"
-            }
+        // Update the button state and strum bar state independently, ensuring neither is blocked
+        if let newButtonState = newButtonState {
+            selfPointer.buttonState = newButtonState
+        }
+        if let newAxisState = newAxisState {
+            selfPointer.axisState = newAxisState
+        }
 
-            // Clear the input buffer after processing
-            selfPointer.inputBuffer.removeAll()
+        // Update the UI with the current state of both inputs
+        DispatchQueue.main.async {
+            selfPointer.statusMessage = "Button: \(selfPointer.buttonState), Strum bar: \(selfPointer.axisState)"
         }
     }
 }
