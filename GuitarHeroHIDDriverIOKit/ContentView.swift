@@ -18,14 +18,21 @@ struct ContentView: View {
 
             Spacer()
 
-            // Show the current status message from the driver
+            // Display the current status message from the driver
             Text(guitarHeroDriver.statusMessage)
                 .font(.headline)
                 .padding()
 
+            // Show the button and strum bar state if connected
             if guitarHeroDriver.isConnected {
                 Text("Controller is connected!")
                     .foregroundColor(.green)
+                    .padding()
+
+                Text("Button State: \(guitarHeroDriver.buttonState)")
+                    .padding()
+                
+                Text("Strum Bar Position: \(guitarHeroDriver.axisState)")
                     .padding()
             } else {
                 Text("Controller is not connected.")
@@ -35,7 +42,7 @@ struct ContentView: View {
 
             Spacer()
 
-            // Optionally, add a button or action to force recheck connection
+            // Button to reinitialize the driver
             Button(action: {
                 guitarHeroDriver.setupHIDManager()
             }) {
@@ -48,10 +55,9 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            // Initialize the HID driver when the view appears
             guitarHeroDriver.setupHIDManager()
 
-            // Start the run loop to listen for input from the device
+            // Start the run loop in a background thread
             DispatchQueue.global().async {
                 CFRunLoopRun()
             }

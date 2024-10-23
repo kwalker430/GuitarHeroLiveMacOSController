@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Info.plist
+   GuitarHeroHIDDriverIOKit
+
+   Created by Kevin Walker on 10/23/24.
+   Copyright (c) 2024 ___ORGANIZATIONNAME___. All rights reserved.
+-->
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.GuitarHeroHIDDriver</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>GuitarHeroHIDDriver</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    
+    <!-- Bluetooth Usage Description -->
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>This app requires Bluetooth access to connect to and interact with the Guitar Hero controller via a USB dongle or directly.</string>
+
+    <!-- Optional: If the app also needs USB permissions -->
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>This app uses Bluetooth to connect to the Guitar Hero controller through a USB dongle and interact with its input.</string>
+    
+    <!-- Optional: If the app needs to access other peripheral devices -->
+    <key>NSBluetoothAlwaysAndWhenInUseUsageDescription</key>
+    <string>This app requires access to Bluetooth to connect and interact with your Guitar Hero controller at all times.</string>
+
+    <!-- If you plan to use Location services for any reason (usually for BLE devices) -->
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>This app uses location services to detect and connect to nearby Bluetooth devices, including the Guitar Hero controller.</string>
+</dict>
+</plist>
